@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/arpollock/Dropbox/C++/AlgoBOWL/main.cpp
+iostream
+-
+vector
+-
+cstdlib
+-
+ctime
+-
+algorithm
+-
+
