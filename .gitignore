@@ -36,3 +36,5 @@ CMakeFiles/*
 .idea/*
 *.bin
 */*.bin
+cmake-build-debug/CMakeFiles/*.bin
+cmake-build-debug/CMakeFiles/3.8.2/*.bin
