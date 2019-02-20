@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/AlgoBOWL.dir/main.cpp.o"
+  "CMakeFiles/AlgoBOWL.dir/Input.cpp.o"
+  "CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o"
   "AlgoBOWL.pdb"
   "AlgoBOWL"
 )

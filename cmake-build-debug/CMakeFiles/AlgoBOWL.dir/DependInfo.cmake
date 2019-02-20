@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/arpollock/Dropbox/C++/AlgoBOWL/Input.cpp" "/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/Input.cpp.o"
+  "/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp" "/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o"
   "/Users/arpollock/Dropbox/C++/AlgoBOWL/main.cpp" "/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

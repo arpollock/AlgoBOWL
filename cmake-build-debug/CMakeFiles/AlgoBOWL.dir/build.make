@@ -81,17 +81,69 @@ CMakeFiles/AlgoBOWL.dir/main.cpp.o.provides: CMakeFiles/AlgoBOWL.dir/main.cpp.o.
 CMakeFiles/AlgoBOWL.dir/main.cpp.o.provides.build: CMakeFiles/AlgoBOWL.dir/main.cpp.o
 
 
+CMakeFiles/AlgoBOWL.dir/Input.cpp.o: CMakeFiles/AlgoBOWL.dir/flags.make
+CMakeFiles/AlgoBOWL.dir/Input.cpp.o: ../Input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AlgoBOWL.dir/Input.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoBOWL.dir/Input.cpp.o -c /Users/arpollock/Dropbox/C++/AlgoBOWL/Input.cpp
+
+CMakeFiles/AlgoBOWL.dir/Input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoBOWL.dir/Input.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arpollock/Dropbox/C++/AlgoBOWL/Input.cpp > CMakeFiles/AlgoBOWL.dir/Input.cpp.i
+
+CMakeFiles/AlgoBOWL.dir/Input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoBOWL.dir/Input.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arpollock/Dropbox/C++/AlgoBOWL/Input.cpp -o CMakeFiles/AlgoBOWL.dir/Input.cpp.s
+
+CMakeFiles/AlgoBOWL.dir/Input.cpp.o.requires:
+
+.PHONY : CMakeFiles/AlgoBOWL.dir/Input.cpp.o.requires
+
+CMakeFiles/AlgoBOWL.dir/Input.cpp.o.provides: CMakeFiles/AlgoBOWL.dir/Input.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/Input.cpp.o.provides.build
+.PHONY : CMakeFiles/AlgoBOWL.dir/Input.cpp.o.provides
+
+CMakeFiles/AlgoBOWL.dir/Input.cpp.o.provides.build: CMakeFiles/AlgoBOWL.dir/Input.cpp.o
+
+
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o: CMakeFiles/AlgoBOWL.dir/flags.make
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o: ../SolutionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o -c /Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp
+
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp > CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.i
+
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp -o CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.s
+
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.requires:
+
+.PHONY : CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.requires
+
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.provides: CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.provides.build
+.PHONY : CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.provides
+
+CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.provides.build: CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o
+
+
 # Object files for target AlgoBOWL
 AlgoBOWL_OBJECTS = \
-"CMakeFiles/AlgoBOWL.dir/main.cpp.o"
+"CMakeFiles/AlgoBOWL.dir/main.cpp.o" \
+"CMakeFiles/AlgoBOWL.dir/Input.cpp.o" \
+"CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o"
 
 # External object files for target AlgoBOWL
 AlgoBOWL_EXTERNAL_OBJECTS =
 
 AlgoBOWL: CMakeFiles/AlgoBOWL.dir/main.cpp.o
+AlgoBOWL: CMakeFiles/AlgoBOWL.dir/Input.cpp.o
+AlgoBOWL: CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o
 AlgoBOWL: CMakeFiles/AlgoBOWL.dir/build.make
 AlgoBOWL: CMakeFiles/AlgoBOWL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AlgoBOWL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable AlgoBOWL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AlgoBOWL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +152,8 @@ CMakeFiles/AlgoBOWL.dir/build: AlgoBOWL
 .PHONY : CMakeFiles/AlgoBOWL.dir/build
 
 CMakeFiles/AlgoBOWL.dir/requires: CMakeFiles/AlgoBOWL.dir/main.cpp.o.requires
+CMakeFiles/AlgoBOWL.dir/requires: CMakeFiles/AlgoBOWL.dir/Input.cpp.o.requires
+CMakeFiles/AlgoBOWL.dir/requires: CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o.requires
 
 .PHONY : CMakeFiles/AlgoBOWL.dir/requires
 
