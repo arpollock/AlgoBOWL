@@ -56,23 +56,52 @@ void SolutionAlgorithm::readInput(string fileName){
 }
 
 void SolutionAlgorithm::additionSequence(){
-    //set<int> validOperands;
-    //validOperands.insert(1); // 1 is always a valid operand
-
-
-    int currentVal = 1;
+    vector<int> validOperands;
+    validOperands.push_back(1); // 1 is always a valid operand
     for(int ele: input){
-        bool summedTo = false;
-        while(!summedTo){
-            pair<int,int> currentAddition;
-            currentAddition.first = currentVal;
-            currentAddition.second = 1;
-            solution.push_back(currentAddition);
-            currentVal +=1;
-            if(currentVal==ele){
-                summedTo = true;
+
+        int currentMax = 0;
+        int currentSum = 2*validOperands.at(validOperands.size()-1); // add the biggest operand to itself
+
+        pair<int,int> addition;
+        addition.first =validOperands.at(validOperands.size()-1);
+        addition.second =validOperands.at(validOperands.size()-1);
+
+        int difference = ele - currentSum;
+
+        while(difference != 0){
+            if( difference < 0 ){
+                // take the next biggest and try again
+                currentMax++;
+                currentSum = 2*validOperands.at(validOperands.size()-1-currentMax);
+                addition.first =validOperands.at(validOperands.size()-1-currentMax);
+                addition.second =validOperands.at(validOperands.size()-1-currentMax);
+            }else if(difference > 0){
+                // operation is moving toward goal, add to addition sequence
+                solution.push_back(addition);
+                validOperands.push_back(currentSum);
+
+                bool foundNextBiggest = false;
+                int i = validOperands.size()-1; // start at the end of the list
+                int valueToAdd = 1;
+                while( !foundNextBiggest && i>=0 ){
+                    if( validOperands.at(i)<=difference ){
+                        valueToAdd = validOperands.at(i);
+                        foundNextBiggest = true;
+
+                    }
+                    i--;
+                }
+                addition.first = currentSum;
+                addition.second = valueToAdd;
+                //solution.push_back(addition);
+                currentSum+=valueToAdd;
             }
+
+            difference = ele - currentSum;
         }
+        solution.push_back(addition);
+        validOperands.push_back(currentSum);
     }
 }
 
@@ -107,6 +136,7 @@ bool SolutionAlgorithm::validOutput(string fileOutputName){
     if(!inFile.is_open()){
         cerr << "Error opening output file" <<endl;
     }
+
     int rows = 0;
     inFile >> rows;
     vector<int> output;
@@ -121,7 +151,8 @@ bool SolutionAlgorithm::validOutput(string fileOutputName){
         if( val1 > 0 && val2 > 0 ) {
             if( validOperands.count(val1) == 0 || validOperands.count(val2)==0 ) {
                 inFile.close();
-                cout << "INVALID: using invalid operand." << endl;
+                cout << "INVALID: using invalid operand at row " << i-2 << endl;
+                cout << "val1: " << val1 << " val2: " << val2 <<endl;
                 return false;
             }else {
                 int sum = val1 + val2;

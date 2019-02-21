@@ -80,7 +80,7 @@ int main() {
             cout << "Valid output?  " << verify.validOutput(fileName) << endl;
             break;
         }
-        deafult: {
+        default: {
             cout << "Unrecognized Input" << endl;
             break;
         }

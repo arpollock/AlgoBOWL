@@ -18,7 +18,7 @@ class SolutionAlgorithm {
 public:
 
     const int LOWER_BOUND = 1; // positive integers
-    const int UPPER_BOUND = 1000000000; // 10^9
+    const int UPPER_BOUND = 1000000000; // 10^7 //1000000000; // 10^9
 
     // Getters, Setters, & Print Help
     vector<int> getInput();
