@@ -1,2 +1,4 @@
+ToolSet: w64 6.0 (local)@C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32
 Options: 
-CMake: 3.8.2@/Applications/CLion.app/Contents/bin/cmake/bin/cmake
+
+Options:

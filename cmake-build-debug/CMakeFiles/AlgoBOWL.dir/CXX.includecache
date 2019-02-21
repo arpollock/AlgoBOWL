@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.cpp
+D:/Dropbox/C++/AlgoBOWL/InputGenerator.cpp
 iostream
 -
 vector
@@ -24,7 +24,7 @@ fstream
 set
 -
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.h
+D:/Dropbox/C++/AlgoBOWL/InputGenerator.h
 iostream
 -
 vector
@@ -36,9 +36,9 @@ ctime
 algorithm
 -
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp
+D:/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp
 SolutionAlgorithm.h
-/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
+D:/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
 iostream
 -
 vector
@@ -50,7 +50,7 @@ string
 fstream
 -
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
+D:/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
 iostream
 -
 vector
@@ -62,7 +62,7 @@ string
 fstream
 -
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/main.cpp
+D:/Dropbox/C++/AlgoBOWL/main.cpp
 iostream
 -
 vector
@@ -74,7 +74,7 @@ ctime
 algorithm
 -
 InputGenerator.h
-/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.h
+D:/Dropbox/C++/AlgoBOWL/InputGenerator.h
 SolutionAlgorithm.h
-/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
+D:/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
 

@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.cpp" "/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.o"
-  "/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp" "/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o"
-  "/Users/arpollock/Dropbox/C++/AlgoBOWL/main.cpp" "/Users/arpollock/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/main.cpp.o"
+  "D:/Dropbox/C++/AlgoBOWL/InputGenerator.cpp" "D:/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.obj"
+  "D:/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp" "D:/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.obj"
+  "D:/Dropbox/C++/AlgoBOWL/main.cpp" "D:/Dropbox/C++/AlgoBOWL/cmake-build-debug/CMakeFiles/AlgoBOWL.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
