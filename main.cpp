@@ -40,8 +40,6 @@ int main() {
             cout << "Enter the size of the list (must be [2, 1000]): ";
             cin >> mySize;
             vector<int> myList = createList(mySize);
-            cout << "Is sorted? " << isSorted(myList) << endl;
-            cout << "Is vaild size? " << validSize(myList.size()) << endl;
             cout << "***** Generating output file *****" << endl;
             outputToFile(mySize, myList);
 
@@ -59,9 +57,21 @@ int main() {
             break;
         }
         case 3: {
+            cout << "Chose input file name to verify (include .txt at the end): ";
+            string fileName = "";
+            cin >> fileName;
+            SolutionAlgorithm verify;
+            verify.readInput(fileName);
+            cout << "Is sorted? " << isSorted(verify.getInput()) << endl;
+            cout << "Is vaild size? " << validSize(verify.getSize()) << endl;
+            cout << "Valid element values? " << validValues(verify.getInput()) << endl;
             break;
         }
         case 4: {
+            cout << "Chose output file name to verify (include .txt at the end): ";
+            string fileName = "";
+            cin >> fileName;
+            cout << "Valid output?  " << validOutput(fileName) << endl;
             break;
         }
         deafult: {

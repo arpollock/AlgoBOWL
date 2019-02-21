@@ -19,6 +19,9 @@ public:
     void printValues();
     void outputToFile();
     void additionSequence();
+    vector<int> getInput();
+    int getSize();
+    bool validOutput();
 
 private:
     vector<int> input;

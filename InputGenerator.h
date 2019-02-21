@@ -20,4 +20,8 @@ bool isSorted( const vector<int>& vect);
 
 void outputToFile( const int size, const vector<int>& vect);
 
+bool validValues( const vector<int>& vect);
+
+bool validOutput(string fileName);
+
 #endif //ALGOBOWL_INPUTGENERATOR_H

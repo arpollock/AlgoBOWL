@@ -123,32 +123,32 @@ AlgoBOWL/fast:
 	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/build
 .PHONY : AlgoBOWL/fast
 
-Input.o: Input.cpp.o
+InputGenerator.o: InputGenerator.cpp.o
 
-.PHONY : Input.o
+.PHONY : InputGenerator.o
 
 # target to build an object file
-Input.cpp.o:
-	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/Input.cpp.o
-.PHONY : Input.cpp.o
+InputGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.o
+.PHONY : InputGenerator.cpp.o
 
-Input.i: Input.cpp.i
+InputGenerator.i: InputGenerator.cpp.i
 
-.PHONY : Input.i
+.PHONY : InputGenerator.i
 
 # target to preprocess a source file
-Input.cpp.i:
-	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/Input.cpp.i
-.PHONY : Input.cpp.i
+InputGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.i
+.PHONY : InputGenerator.cpp.i
 
-Input.s: Input.cpp.s
+InputGenerator.s: InputGenerator.cpp.s
 
-.PHONY : Input.s
+.PHONY : InputGenerator.s
 
 # target to generate assembly for a file
-Input.cpp.s:
-	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/Input.cpp.s
-.PHONY : Input.cpp.s
+InputGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.s
+.PHONY : InputGenerator.cpp.s
 
 SolutionAlgorithm.o: SolutionAlgorithm.cpp.o
 
@@ -213,9 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... AlgoBOWL"
-	@echo "... Input.o"
-	@echo "... Input.i"
-	@echo "... Input.s"
+	@echo "... InputGenerator.o"
+	@echo "... InputGenerator.i"
+	@echo "... InputGenerator.s"
 	@echo "... SolutionAlgorithm.o"
 	@echo "... SolutionAlgorithm.i"
 	@echo "... SolutionAlgorithm.s"

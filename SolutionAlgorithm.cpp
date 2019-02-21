@@ -31,7 +31,7 @@ void SolutionAlgorithm::printValues(){
     }
 }
 
-void SolutionAlgorithm::outputToFile( ){
+void SolutionAlgorithm::outputToFile(){
     string fileName = "algobowl_output_size" + to_string(size) + ".txt";
     ofstream outfile(fileName);
     if(!outfile.is_open()){
@@ -44,4 +44,12 @@ void SolutionAlgorithm::outputToFile( ){
 
 void SolutionAlgorithm::additionSequence(){
 
+}
+
+vector<int> SolutionAlgorithm::getInput(){
+    return input;
+}
+
+int SolutionAlgorithm::getSize(){
+    return size;
 }

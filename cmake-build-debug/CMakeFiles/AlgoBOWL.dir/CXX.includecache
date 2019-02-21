@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/Input.cpp
+/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.cpp
 iostream
 -
 vector
@@ -20,6 +20,8 @@ algorithm
 string
 -
 fstream
+-
+set
 -
 
 /Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.h
