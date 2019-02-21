@@ -22,6 +22,6 @@ void outputToFile( const int size, const vector<int>& vect);
 
 bool validValues( const vector<int>& vect);
 
-bool validOutput(string fileName);
+bool validOutput(string fileOutputName);
 
 #endif //ALGOBOWL_INPUTGENERATOR_H

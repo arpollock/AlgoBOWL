@@ -1,3 +1,1 @@
-"D:\Programs\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\AlgoBOWL.dir/objects.a
-C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe cr CMakeFiles\AlgoBOWL.dir/objects.a @CMakeFiles\AlgoBOWL.dir\objects1.rsp
-C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\AlgoBOWL.dir/objects.a -Wl,--no-whole-archive  -o AlgoBOWL.exe -Wl,--out-implib,libAlgoBOWL.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\AlgoBOWL.dir\linklibs.rsp
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/AlgoBOWL.dir/main.cpp.o CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.o CMakeFiles/AlgoBOWL.dir/SolutionAlgorithm.cpp.o  -o AlgoBOWL 

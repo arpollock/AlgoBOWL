@@ -3,7 +3,6 @@
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
-#include "InputGenerator.h"
 #include "SolutionAlgorithm.h"
 
 using namespace std;
@@ -33,15 +32,17 @@ int main() {
         validChoice = isValidChoice(choice);
     }
 
+    SolutionAlgorithm verify;
+
     switch(choice) {
         case 1: {
 
             int mySize;
             cout << "Enter the size of the list (must be [2, 1000]): ";
             cin >> mySize;
-            vector<int> myList = createList(mySize);
+            verify.createList(mySize);
             cout << "***** Generating output file *****" << endl;
-            outputToFile(mySize, myList);
+            verify.inputToFile();
 
             break;
         }
@@ -50,9 +51,11 @@ int main() {
             cout << "Chose input file name (include .txt at the end): ";
             string fileName = "";
             cin >> fileName;
-            SolutionAlgorithm verify;
+
             verify.readInput(fileName);
             verify.printValues();
+            verify.additionSequence();
+            verify.inputToFile();
 
             break;
         }
@@ -60,18 +63,21 @@ int main() {
             cout << "Chose input file name to verify (include .txt at the end): ";
             string fileName = "";
             cin >> fileName;
-            SolutionAlgorithm verify;
             verify.readInput(fileName);
-            cout << "Is sorted? " << isSorted(verify.getInput()) << endl;
-            cout << "Is vaild size? " << validSize(verify.getSize()) << endl;
-            cout << "Valid element values? " << validValues(verify.getInput()) << endl;
+            cout << "Is sorted? " << verify.validInputSort() << endl;
+            cout << "Is vaild size? " << verify.validInputSize() << endl;
+            cout << "Valid element values? " << verify.validInputValues() << endl;
             break;
         }
         case 4: {
-            cout << "Chose output file name to verify (include .txt at the end): ";
+            cout << "Chose input file name to check output against (include .txt at the end): ";
             string fileName = "";
             cin >> fileName;
-            cout << "Valid output?  " << validOutput(fileName) << endl;
+            verify.readInput(fileName);
+
+            cout << "Chose output file name to verify (include .txt at the end): ";
+            cin >> fileName;
+            cout << "Valid output?  " << verify.validOutput(fileName) << endl;
             break;
         }
         deafult: {

@@ -10,22 +10,48 @@
 #include <cstdlib>
 #include <string>
 #include <fstream>
+#include <utility>
 
 using namespace std;
 
 class SolutionAlgorithm {
 public:
-    void readInput(string fileName);
-    void printValues();
-    void outputToFile();
-    void additionSequence();
+
+    const int LOWER_BOUND = 1; // positive integers
+    const int UPPER_BOUND = 1000000000; // 10^9
+
+    // Getters, Setters, & Print Help
     vector<int> getInput();
     int getSize();
-    bool validOutput();
+    void printValues();
+
+    // Create Input
+    vector<int> createList( int length );
+
+    // Interpret Input File
+    void readInput(string fileName);
+
+    // Create Output
+    void additionSequence();
+
+    // Verify Established Input
+    bool validInputSize();
+    bool validInputSort();
+    bool validInputValues();
+
+    // Verify Established Output
+    bool validOutput( string fileOutputName );
+
+    // Output input to File
+    void inputToFile();
+
+    // Output output to File
+    void outputToFile();
 
 private:
     vector<int> input;
     int size;
+    vector<pair<int, int>> solution;
 
 };
 
