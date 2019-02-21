@@ -21,14 +21,15 @@ int SolutionAlgorithm::getSize(){
     return size;
 }
 
-void SolutionAlgorithm::printValues(){
+void SolutionAlgorithm::printValues() {
     cout << size << endl;
-    for(int ele: input){
-        cout << ele << " " ;
+    for (int ele: input) {
+        cout << ele << " ";
     }
 }
 
-vector<int> SolutionAlgorithm::createList(int length){
+void SolutionAlgorithm::createInput(int length){
+    size = length;
     vector<int> intList;
     for(int i = 0 ; i < length ; i++){
         int ele = rand() % (UPPER_BOUND-LOWER_BOUND) + LOWER_BOUND;
@@ -36,7 +37,8 @@ vector<int> SolutionAlgorithm::createList(int length){
     }
 
     sort(intList.begin(), intList.end());
-    return intList;
+    input = intList;
+    return;
 }
 
 void SolutionAlgorithm::readInput(string fileName){

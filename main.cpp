@@ -40,7 +40,7 @@ int main() {
             int mySize;
             cout << "Enter the size of the list (must be [2, 1000]): ";
             cin >> mySize;
-            verify.createList(mySize);
+            verify.createInput(mySize);
             cout << "***** Generating output file *****" << endl;
             verify.inputToFile();
 
@@ -53,9 +53,9 @@ int main() {
             cin >> fileName;
 
             verify.readInput(fileName);
-            verify.printValues();
+            //verify.printValues();
             verify.additionSequence();
-            verify.inputToFile();
+            verify.outputToFile();
 
             break;
         }

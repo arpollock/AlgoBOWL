@@ -26,7 +26,7 @@ public:
     void printValues();
 
     // Create Input
-    vector<int> createList( int length );
+    void createInput(int length);
 
     // Interpret Input File
     void readInput(string fileName);
