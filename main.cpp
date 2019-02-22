@@ -20,7 +20,7 @@ int main() {
 
     cout << "Options:" << endl;
     cout << "(1) Generate Input" << endl;
-    cout << "(2) Generate Output from Input" << endl;
+    cout << "(2) Generate Output from Input (& Verify Output)" << endl;
     cout << "(3) Verify Input" << endl;
     cout << "(4) Verify Output" << endl;
     int choice = 0;
@@ -48,14 +48,22 @@ int main() {
         }
         case 2: {
 
-            cout << "Chose input file name (include .txt at the end): ";
-            string fileName = "";
-            cin >> fileName;
+            cout << "Chose input file group number (e.g. 91): ";
+            string num = "";
+            cin >> num;
+            string fileNameIn = "./inputs/input_group";
+            string fileNameOut = "./outputs/output_group";
+            fileNameIn = fileNameIn + num + ".txt";
+            fileNameOut = fileNameOut + num +".txt";
 
-            verify.readInput(fileName);
+            verify.readInput(fileNameIn);
             //verify.printValues();
             verify.additionSequence();
-            verify.outputToFile();
+            //cout << "Chose output file name (include .txt at the end): ";
+            //cin >> fileName;
+
+            verify.outputToFile(fileNameOut);
+            cout << "Valid output?  " << verify.validOutput(fileNameOut) << endl;
 
             break;
         }

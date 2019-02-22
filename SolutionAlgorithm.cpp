@@ -84,6 +84,9 @@ void SolutionAlgorithm::additionSequence(){
                 bool foundNextBiggest = false;
                 int i = validOperands.size()-1; // start at the end of the list
                 int valueToAdd = 1;
+                if(difference == 1 ){ //only need to add one
+                    foundNextBiggest = true;
+                }
                 while( !foundNextBiggest && i>=0 ){
                     if( validOperands.at(i)<=difference ){
                         valueToAdd = validOperands.at(i);
@@ -190,8 +193,7 @@ void SolutionAlgorithm::inputToFile(){
     return;
 }
 
-void SolutionAlgorithm::outputToFile(){
-    string fileName = "algobowl_output_size" + to_string(size) + ".txt";
+void SolutionAlgorithm::outputToFile(string fileName){
     ofstream outfile(fileName);
     if(!outfile.is_open()){
         cerr << "Error opening output file" <<endl;

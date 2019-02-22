@@ -46,7 +46,7 @@ public:
     void inputToFile();
 
     // Output output to File
-    void outputToFile();
+    void outputToFile( string fileName );
 
 private:
     vector<int> input;
