@@ -123,33 +123,6 @@ AlgoBOWL/fast:
 	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/build
 .PHONY : AlgoBOWL/fast
 
-InputGenerator.o: InputGenerator.cpp.o
-
-.PHONY : InputGenerator.o
-
-# target to build an object file
-InputGenerator.cpp.o:
-	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.o
-.PHONY : InputGenerator.cpp.o
-
-InputGenerator.i: InputGenerator.cpp.i
-
-.PHONY : InputGenerator.i
-
-# target to preprocess a source file
-InputGenerator.cpp.i:
-	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.i
-.PHONY : InputGenerator.cpp.i
-
-InputGenerator.s: InputGenerator.cpp.s
-
-.PHONY : InputGenerator.s
-
-# target to generate assembly for a file
-InputGenerator.cpp.s:
-	$(MAKE) -f CMakeFiles/AlgoBOWL.dir/build.make CMakeFiles/AlgoBOWL.dir/InputGenerator.cpp.s
-.PHONY : InputGenerator.cpp.s
-
 SolutionAlgorithm.o: SolutionAlgorithm.cpp.o
 
 .PHONY : SolutionAlgorithm.o
@@ -213,9 +186,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... AlgoBOWL"
-	@echo "... InputGenerator.o"
-	@echo "... InputGenerator.i"
-	@echo "... InputGenerator.s"
 	@echo "... SolutionAlgorithm.o"
 	@echo "... SolutionAlgorithm.i"
 	@echo "... SolutionAlgorithm.s"

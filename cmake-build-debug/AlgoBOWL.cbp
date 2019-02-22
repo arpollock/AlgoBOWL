@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.cpp">
-			<Option target="AlgoBOWL"/>
-		</Unit>
-		<Unit filename="/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.h">
-			<Option target="AlgoBOWL"/>
-		</Unit>
 		<Unit filename="/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp">
 			<Option target="AlgoBOWL"/>
 		</Unit>

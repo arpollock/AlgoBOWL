@@ -3,5 +3,5 @@ project(AlgoBOWL)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp InputGenerator.h InputGenerator.cpp SolutionAlgorithm.cpp SolutionAlgorithm.h)
+set(SOURCE_FILES main.cpp SolutionAlgorithm.cpp SolutionAlgorithm.h)
 add_executable(AlgoBOWL ${SOURCE_FILES})

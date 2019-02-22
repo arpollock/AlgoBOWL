@@ -71,11 +71,14 @@ void SolutionAlgorithm::additionSequence(){
 
         while(difference != 0){
             if( difference < 0 ){
-                // take the next biggest and try again
+                // take the next biggest (for one number) and try again
                 currentMax++;
-                currentSum = 2*validOperands.at(validOperands.size()-1-currentMax);
-                addition.first =validOperands.at(validOperands.size()-1-currentMax);
-                addition.second =validOperands.at(validOperands.size()-1-currentMax);
+                if( addition.first > addition.second ){
+                    addition.first = validOperands.at(validOperands.size()-1-currentMax);
+                }else{  // second is greater or equal
+                    addition.second = validOperands.at(validOperands.size()-1-currentMax);
+                }
+                currentSum = addition.first + addition.second;
             }else if(difference > 0){
                 // operation is moving toward goal, add to addition sequence
                 solution.push_back(addition);

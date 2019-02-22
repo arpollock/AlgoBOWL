@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/InputGenerator.cpp
-iostream
--
-vector
--
-cstdlib
--
-ctime
--
-algorithm
--
-string
--
-fstream
--
-set
--
-
 /Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp
 SolutionAlgorithm.h
 /Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
