@@ -11,6 +11,7 @@
 #include <string>
 #include <fstream>
 #include <utility>
+#include <map>
 
 using namespace std;
 
@@ -33,6 +34,7 @@ public:
 
     // Create Output
     void additionSequence();
+    void postProcessing();
 
     // Verify Established Input
     bool validInputSize();
@@ -49,9 +51,12 @@ public:
     void outputToFile( string fileName );
 
 private:
+    bool secondRound;
     vector<int> input;
     int size;
     vector<pair<int, int>> solution;
+    vector<pair<int,int>> oldSolution;
+    int oldSize;
 
 };
 

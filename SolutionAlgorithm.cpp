@@ -10,6 +10,7 @@
 #include <string>
 #include <fstream>
 #include <set>
+#include <map>
 #include <utility>
 using namespace std;
 
@@ -42,6 +43,7 @@ void SolutionAlgorithm::createInput(int length){
 }
 
 void SolutionAlgorithm::readInput(string fileName){
+    input.clear();
     ifstream inFile(fileName);
     if(!inFile.is_open()){
         cerr << "Error opening input file" <<endl;
@@ -57,15 +59,20 @@ void SolutionAlgorithm::readInput(string fileName){
 
 void SolutionAlgorithm::additionSequence(){
     vector<int> validOperands;
+    validOperands.clear();
     validOperands.push_back(1); // 1 is always a valid operand
     for(int ele: input){
+//        cout << "Valid Operands: ";
+//        for(int ele: validOperands){
+//            cout << ele <<" ";
+//        }
+//        cout<< endl;
 
         int currentMax = 0;
-        int currentSum = 2*validOperands.at(validOperands.size()-1); // add the biggest operand to itself
-
         pair<int,int> addition;
-        addition.first =validOperands.at(validOperands.size()-1);
-        addition.second =validOperands.at(validOperands.size()-1);
+        addition.first = validOperands.at(validOperands.size()-1);
+        addition.second = validOperands.at(validOperands.size()-1);
+        int currentSum = addition.first + addition.second; // add the biggest operand to itself
 
         int difference = ele - currentSum;
 
@@ -81,8 +88,12 @@ void SolutionAlgorithm::additionSequence(){
                 currentSum = addition.first + addition.second;
             }else if(difference > 0){
                 // operation is moving toward goal, add to addition sequence
-                solution.push_back(addition);
-                validOperands.push_back(currentSum);
+
+                if( find(validOperands.begin(), validOperands.end(), currentSum) == validOperands.end() ){
+                    // not already a calculated number
+                    solution.push_back(addition);
+                    validOperands.push_back(currentSum);
+                }
 
                 bool foundNextBiggest = false;
                 int i = validOperands.size()-1; // start at the end of the list
@@ -106,9 +117,56 @@ void SolutionAlgorithm::additionSequence(){
 
             difference = ele - currentSum;
         }
-        solution.push_back(addition);
-        validOperands.push_back(currentSum);
+        if( find(validOperands.begin(), validOperands.end(), currentSum) == validOperands.end() ){
+            // not already a calculated number
+            solution.push_back(addition);
+            validOperands.push_back(currentSum);
+        }
     }
+}
+
+void SolutionAlgorithm::postProcessing(){
+    // save the old addition sequence in case it is better (i.e. for small inputs)
+    oldSolution = solution;
+    oldSize = size;
+    map<int, int> sumCounter;
+    // get all the sums of consecutive additions
+    for(int i = 1; i < solution.size(); i++){
+        int currSum;
+        currSum = solution.at(i-1).second + solution.at(i).second;
+        if(sumCounter.count(currSum)==0){
+            sumCounter.insert(pair<int,int>(currSum,1));
+        }else{
+            sumCounter.at(currSum)++;
+        }
+    }
+    // find the frequency of those sums
+    for(pair<int,int> kv: sumCounter){
+        //cout << kv.first << " " <<kv.second << endl;
+        if(kv.second > 2 && find(input.begin(), input.end(), kv.first) == input.end() ){
+            // not already a calculated number & is calculated multiple times
+            input.push_back(kv.first);
+        }
+    }
+
+    sort(input.begin(), input.end());
+    size = input.size();
+    solution.clear();
+//    for(int ele: input){
+//        cout << ele <<endl;
+//    }
+    additionSequence();
+    if(solution.size()<oldSolution.size()){
+        oldSolution = solution;
+        oldSize = size;
+        postProcessing();
+    }
+//    map<int,int>::iterator it = sumCounter.begin();
+//
+//    while(it != sumCounter.end()){
+//        cout << it->first << " " << it->second << endl;
+//        it++;
+//    }
 }
 
 bool SolutionAlgorithm::validInputSize(){
@@ -201,10 +259,18 @@ void SolutionAlgorithm::outputToFile(string fileName){
     if(!outfile.is_open()){
         cerr << "Error opening output file" <<endl;
     }
-    outfile << solution.size() << endl;
-    for(auto currentAddition: solution){
-        outfile << currentAddition.first << " " << currentAddition.second << endl;
+    if( solution.size() < oldSolution.size() ){
+        outfile << solution.size() << endl;
+        for(auto currentAddition: solution){
+            outfile << currentAddition.first << " " << currentAddition.second << endl;
+        }
+    }else{
+        outfile << oldSolution.size() << endl;
+        for(auto currentAddition: oldSolution){
+            outfile << currentAddition.first << " " << currentAddition.second << endl;
+        }
     }
+
     outfile.close();
     return;
 }

@@ -59,9 +59,10 @@ int main() {
             verify.readInput(fileNameIn);
             //verify.printValues();
             verify.additionSequence();
+            verify.postProcessing();
             //cout << "Chose output file name (include .txt at the end): ";
             //cin >> fileName;
-
+            verify.readInput(fileNameIn);
             verify.outputToFile(fileNameOut);
             cout << "Valid output?  " << verify.validOutput(fileNameOut) << endl;
 
@@ -78,14 +79,21 @@ int main() {
             break;
         }
         case 4: {
-            cout << "Chose input file name to check output against (include .txt at the end): ";
-            string fileName = "";
-            cin >> fileName;
-            verify.readInput(fileName);
+            //cout << "Chose input file name to check output against (include .txt at the end): ";
+            //string fileName = "";
+            //cin >> fileName;
+            cout << "Chose input file group number (e.g. 91): ";
+            string num = "";
+            cin >> num;
+            string fileNameIn = "./inputs/input_group";
+            string fileNameOut = "./outputs/output_group";
+            fileNameIn = fileNameIn + num + ".txt";
+            fileNameOut = fileNameOut + num +".txt";
+            verify.readInput(fileNameIn);
 
-            cout << "Chose output file name to verify (include .txt at the end): ";
-            cin >> fileName;
-            cout << "Valid output?  " << verify.validOutput(fileName) << endl;
+            //cout << "Chose output file name to verify (include .txt at the end): ";
+            //cin >> fileName;
+            cout << "Valid output?  " << verify.validOutput(fileNameOut) << endl;
             break;
         }
         default: {

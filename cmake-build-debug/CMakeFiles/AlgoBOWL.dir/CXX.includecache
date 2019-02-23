@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.cpp
-SolutionAlgorithm.h
-/Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
-iostream
--
-vector
--
-cstdlib
--
-string
--
-fstream
--
-set
--
-utility
--
-
 /Users/arpollock/Dropbox/C++/AlgoBOWL/SolutionAlgorithm.h
 iostream
 -
@@ -36,6 +18,8 @@ string
 fstream
 -
 utility
+-
+map
 -
 
 /Users/arpollock/Dropbox/C++/AlgoBOWL/main.cpp
